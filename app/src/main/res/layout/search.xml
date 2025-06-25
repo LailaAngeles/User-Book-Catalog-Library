@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1C1C1C"
+    android:fitsSystemWindows="true">
+    <!-- Search Bar -->
+    <EditText
+        android:id="@+id/search_bar"
+        android:layout_width="323dp"
+        android:layout_height="53dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/search_bar_bg"
+        android:hint="Search Stories"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        android:imeOptions="actionSearch"
+        android:inputType="text" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/contentrecycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:contentDescription="content"
+        android:layout_below="@id/search_bar"
+        android:layout_above="@id/footer"
+        android:layout_marginTop="16dp"
+        android:padding="8dp"
+        android:clipToPadding="false" />
+    <ProgressBar
+        android:id="@+id/load"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Large"/>
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="#1C1C1C"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingHorizontal="24dp"
+        android:weightSum="3">
+
+        <ImageButton
+            android:id="@+id/Home"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="Home"
+            android:scaleType="centerInside"
+            android:src="@drawable/home" />
+
+        <ImageButton
+            android:id="@+id/library"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="Add Books"
+            android:scaleType="centerInside"
+            android:src="@drawable/library" />
+
+        <ImageButton
+            android:id="@+id/search"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="Search"
+            android:scaleType="centerInside"
+            android:src="@drawable/search" />
+    </LinearLayout>
+
+</RelativeLayout>

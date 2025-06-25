@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "234210483211",
+    "project_id": "parasuratan-93dca",
+    "storage_bucket": "parasuratan-93dca.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:234210483211:android:4eb0e4d6be80e59d843b0e",
+        "android_client_info": {
+          "package_name": "com.example.admin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAo8J1q3jjE7PyMLEwepXIPkliIvxgtjak"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:234210483211:android:a52ddc706ba67da2843b0e",
+        "android_client_info": {
+          "package_name": "com.example.parasuratanuser"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAo8J1q3jjE7PyMLEwepXIPkliIvxgtjak"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Parasuratan(user)</string>
+    <string-array name="book_status_options">
+        <item>Not Read</item>
+        <item>Reading</item>
+        <item>Complete</item>
+    </string-array>
+</resources>

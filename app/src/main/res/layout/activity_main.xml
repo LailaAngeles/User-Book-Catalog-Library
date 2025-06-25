@@ -1,0 +1,281 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/write_page"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1C1C1C"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/footer"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp">
+
+            <!-- Top Logo / Header -->
+            <LinearLayout
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="62dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_marginBottom="16dp">
+
+                <ImageView
+                    android:id="@+id/parasuratan"
+                    android:layout_width="209dp"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/parasuratan" />
+            </LinearLayout>
+
+            <!-- RecyclerView -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/contentrecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="212dp"
+                android:layout_marginBottom="16dp"
+                android:clipToPadding="false"
+                android:overScrollMode="never"
+                android:scrollbars="horizontal"
+                android:contentDescription="content" />
+
+            <TextView
+                android:id="@+id/RealisticFictionEmpty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Empty"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:padding="16dp"
+                android:layout_marginBottom="8dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/RealisticFictionChategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Realistic Fiction"
+                android:textSize="25sp"
+                android:paddingLeft="10dp"
+                android:textColor="@color/white"
+                android:layout_marginBottom="8dp"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/RealisticFiction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="212dp"
+                android:layout_marginBottom="16dp"
+                android:clipToPadding="false"
+                android:overScrollMode="never"
+                android:scrollbars="horizontal"
+                android:contentDescription="content" />
+
+            <TextView
+                android:id="@+id/UnknownGenreChategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Unknown Genre"
+                android:textSize="25sp"
+                android:paddingLeft="10dp"
+                android:textColor="@color/white"
+                android:layout_marginBottom="8dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/unknownGenreEmpty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Empty"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:layout_marginBottom="8dp"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/UnknownGenre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="212dp"
+                android:layout_marginBottom="16dp"
+                android:clipToPadding="false"
+                android:overScrollMode="never"
+                android:scrollbars="horizontal"
+                android:contentDescription="content" />
+
+            <TextView
+                android:id="@+id/MythFolkChategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mythology/Folklore"
+                android:textSize="25sp"
+                android:paddingLeft="10dp"
+                android:textColor="@color/white"
+                android:layout_marginBottom="8dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/mythFolkEmpty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Empty"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:paddingTop="32dp"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:layout_marginBottom="8dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/MythFolk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="212dp"
+                android:layout_marginBottom="16dp"
+                android:clipToPadding="false"
+                android:overScrollMode="never"
+                android:scrollbars="horizontal"
+                android:contentDescription="content" />
+
+            <TextView
+                android:id="@+id/EducInfoChategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Educational/Informational"
+                android:textSize="25sp"
+                android:paddingLeft="10dp"
+                android:textColor="@color/white"
+                android:layout_marginBottom="8dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/educInfoEmpty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Empty"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:layout_marginBottom="8dp"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/EducInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="212dp"
+                android:layout_marginBottom="16dp"
+                android:clipToPadding="false"
+                android:overScrollMode="never"
+                android:scrollbars="horizontal"
+                android:contentDescription="content" />
+
+            <TextView
+                android:id="@+id/FanAdvChategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fantasy/Adventure"
+                android:textSize="25sp"
+                android:paddingLeft="10dp"
+                android:textColor="@color/white"
+                android:layout_marginBottom="8dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/fanAdvEmpty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Empty"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:layout_marginBottom="8dp"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/FanAdv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="212dp"
+                android:layout_marginBottom="16dp"
+                android:clipToPadding="false"
+                android:overScrollMode="never"
+                android:scrollbars="horizontal"
+                android:contentDescription="content" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/loadingIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Large" />
+
+    <!-- Footer Navigation -->
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="#1C1C1C"
+        android:gravity="center"
+        android:paddingHorizontal="24dp"
+        android:weightSum="3">
+
+        <ImageButton
+            android:id="@+id/Home"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="Home"
+            android:scaleType="centerInside"
+            android:src="@drawable/home" />
+
+        <ImageButton
+            android:id="@+id/library"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="Add Books"
+            android:scaleType="centerInside"
+            android:src="@drawable/library" />
+
+        <ImageButton
+            android:id="@+id/searchbtn"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="Search"
+            android:scaleType="centerInside"
+            android:src="@drawable/search" />
+    </LinearLayout>
+</RelativeLayout>
