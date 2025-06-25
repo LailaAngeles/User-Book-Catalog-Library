@@ -7,6 +7,6 @@ This project allows users to view and manage book data from a database. Users ca
 ✅ User-friendly interface
 
 Technologies Used
-Java (or your language of choice — update as needed)
+Java 
 Firebase (firestore)
-MySQL / SQLite (or your database)
+MySQL 
